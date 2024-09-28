@@ -1,0 +1,667 @@
+@font-face {
+  font-family: 'SF Pro Display Regular';
+  src: url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Semi Bold';
+  src: url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display Ultra Light';
+  src: url('../fonts/SF-Pro-Text-Ultralight.otf') format('opentype');
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Other styles here */
+
+.header, .hero, .about, .gallery, .faq, .footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.logo {
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 120px;
+}
+
+.hero {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 90rem;
+  width: 100%;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 64px;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 span {
+  color: #FF6D6D;
+}
+
+.hero-content p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  margin-bottom: 3rem;
+}
+
+.hero-images {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-images img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-image-flex {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.hero-image-flex img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.learn-more-button {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-more-button span {
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.about {
+  background-color: #000000;
+  color: #FFFFFF;
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+}
+
+.about-container h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.about-container h2 span {
+  color: #FF6D6D;
+}
+
+.about-container p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 0 0; /* Add padding for better spacing on small screens */
+}
+
+.content-card {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  width: 100%; /* Ensure cards take the full width available */
+}
+
+.icon {
+  background-color: #FF6D6D;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.content-card h3 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-card h4 {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #FF6D6D;
+}
+
+.content-card p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.gallery {
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+  flex-wrap: wrap; /* Add this to allow wrapping */
+}
+
+.gallery img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.faq {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.faq h2 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.faq p {
+  font-family: 'SF Pro Display Ultra Light';
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+.faq-content {
+  max-width: 90rem;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #B9CCD0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background-color 0.3s;
+}
+
+.faq-item.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.faq-question {
+  font-family: 'SF Pro Display Regular';
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-question span {
+  font-size: 20px;
+}
+
+.faq-answer {
+  font-family: 'SF Pro Display Ultra Light';
+  margin-top: 1rem;
+  font-size: 16px;
+  color: #555;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+  color: #fff;
+}
+
+.faq-item.active .faq-question .icon {
+  content: url("../icons/icon-minus.svg");
+}
+
+.footer {
+  padding: 4rem 1rem;
+  color: #FFFFFF;
+  background-color: #161515;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.footer-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 100px;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-left h4 {
+  font-family: 'SF Pro Display Semi Bold';
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.footer-left p {
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Regular';
+  font-size: 18px;
+  flex-grow: 1; /* Ensure it takes available space */
+}
+
+.footer-right p {
+  margin: 0.5rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #FFFFFF;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 1rem 1rem 0 1rem;
+  color: #FFFFFF;
+  font-family: 'SF Pro Display Regular';
+  font-size: 15px;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.footer-contact h4 {
+  margin-bottom: 1.3rem;
+}
+
+.office-hour {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Adjust the gap as needed */
+}
+
+.office-hour p {
+  display: flex;
+}
+
+.office-hour p span:first-child {
+  min-width: 150px; /* Adjust the width as needed */
+  text-align: left;
+}
+
+.office-hour p span:last-child {
+  text-align: left;
+}
+
+.contact-us {
+  margin-top: 1.5rem;
+}
+
+.contact-us p {
+  margin-bottom: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-images {
+    flex-direction: column;
+  }
+
+  .hero-image-flex {
+    width: 100%;
+  }
+
+  .learn-more-button {
+    width: 100%;
+  }
+
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+  }
+
+  .gallery {
+    flex-direction: row; /* Ensure row direction */
+  }
+
+  .gallery img {
+    max-width: 100%; /* Adjust the width for smaller screens */
+    flex: 0 0 50%; /* Ensure two images per row */
+  }
+
+  .content-card {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .content-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .content-card h4 {
+    font-size: 1rem;
+  }
+
+  .content-card p {
+    font-size: 0.875rem;
+  }
+
+  .faq-content {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-question span {
+    font-size: 20px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-left {
+    width: 100%;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-left {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 0.875rem;
+  }
+
+  .learn-more-button span {
+    font-size: 0.875rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-container p {
+    font-size: 0.875rem;
+  }
+
+  .content-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .content-card p {
+    font-size: 0.875rem;
+  }
+
+  .gallery img {
+    flex: 0 0 100%; /* Ensure one image per row on very small screens */
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq p {
+    font-size: 0.875rem;
+  }
+
+  .faq-question span {
+    font-size: 0.875rem;
+  }
+
+  .faq-answer {
+    font-size: 0.875rem;
+  }
+
+  .footer-contact h4 {
+    font-size: 1rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.875rem;
+  }
+
+  .footer-logo {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  .learn-more-button span {
+    font-size: 0.75rem;
+  }
+
+  .hero-images img {
+    max-width: 100%; /* Ensure images fit within the viewport */
+  }
+
+  .hero-image-flex {
+    width: 100%;
+  }
+
+  .about-container h2 {
+    font-size: 1rem;
+  }
+
+  .about-container p {
+    font-size: 0.75rem;
+  }
+
+  .content-card-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content-card {
+    padding: 1rem;
+    font-size: 0.625rem;
+  }
+
+  .content-card h3 {
+    font-size: 0.875rem;
+  }
+
+  .content-card h4 {
+    font-size: 0.75rem;
+  }
+
+  .content-card p {
+    font-size: 0.625rem;
+  }
+
+  .faq h2 {
+    font-size: 1.25rem;
+  }
+
+  .faq p {
+    font-size: 0.75rem;
+  }
+
+  .faq-question span {
+    font-size: 0.875rem;
+  }
+
+  .faq-answer {
+    font-size: 0.875rem;
+  }
+
+  .footer-contact h4 {
+    font-size: 0.875rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+}
